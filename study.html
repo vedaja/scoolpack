@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math Practice</title>
+
+</head>
+<body style="background-color:#F76C6C">
+
+<h4 id= "number1"></h4>
+<h4 id= "add"></h4>
+<h4 id= "number2"></h4>
+
+<button type="button" onclick="createNumbers()" style="margin: 15px">Start</button>
+<form id="form" onsubmit="return false;" style="margin: 50px">
+    <input  type="text" id="userInput" />
+    <p>    </p>
+    <input  type="submit" onclick="othername();" />
+</form>
+
+<script>
+function othername() {
+    var input = document.getElementById("userInput").value;
+    if(input == {{tog}}){
+        alert("Correct");
+        location.reload();
+    }else{
+        alert("Incorrect. The answer was: " + {{tog}});
+        location.reload();
+    }
+
+}
+function createNumbers() {
+    var number1 = {{ num1 }};
+    var number2 = {{ num2 }};
+
+    document.getElementById("number1").innerHTML = number1;
+    document.getElementById("add").innerHTML = " + ";
+    document.getElementById("number2").innerHTML = number2;
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+<button> <a href="http://127.0.0.1:5000/" class="button">Return to Homepage</a> </button>
+
+
+</body>
+</html>
+
